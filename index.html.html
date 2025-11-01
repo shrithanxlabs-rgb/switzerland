@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Switzerland Trip Planner — 3–7 Day Guide</title>
+  <meta name="description" content="Professional, printable single-page HTML guide for a 3–7 day trip to Switzerland. Includes trip plan, routes, costs and important people." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f7fafc;--card:#ffffff;--accent:#ef4444;--muted:#6b7280;--glass:rgba(255,255,255,0.7)}
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.45;margin:0;background:var(--bg);color:#0f172a}
+    .container{max-width:1100px;margin:32px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:var(--accent);color:white;display:grid;place-items:center;font-weight:800}
+    nav a{margin-left:12px;color:var(--muted);text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:20px;margin-top:20px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    ul.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0;margin:12px 0;list-style:none}
+    ul.grid li{background:#f1f5f9;padding:8px 10px;border-radius:8px;color:#0f172a}
+    /* Trip plan layout */
+    .trip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .trip-day{border-radius:10px;padding:12px;border:1px solid #eef2f7;background:linear-gradient(180deg,var(--card),#fbfdff)}
+    .trip-day h4{margin:0 0 8px 0}
+    .muted{color:var(--muted)}
+    .two-col{display:grid;grid-template-columns:1fr 340px;gap:14px}
+    .map{height:300px;border-radius:10px;overflow:hidden;background:linear-gradient(180deg,#e6eefc,#ffffff);display:flex;align-items:center;justify-content:center}
+    .map svg{max-width:100%;height:100%}
+    .people-list{display:grid;gap:8px}
+    .person{padding:10px;border-radius:8px;border:1px solid #eef2f7;background:white}
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+    @media(max-width:880px){.hero{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.map{height:220px}}
+    /* printable tweaks */
+    @media print{body{background:white} .container{margin:0;padding:8px} nav{display:none} .btn{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">CH</div>
+        <div>
+          <h1>Switzerland — Trip Planner</h1>
+          <div class="muted">Compact, printable guide for 3–7 day trips</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#trip">Trip</a>
+        <a href="#routes">Routes</a>
+        <a href="#costs">Costs</a>
+        <a href="#people">People</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2 style="font-size:20px;margin-bottom:6px">Discover Switzerland — Alps, Lakes & Cities</h2>
+        <p class="lead">Mountains, scenic trains, chocolate and multicultural cities. This single-page guide gives a quick itinerary, route map, cost estimate and notable Swiss figures you can add to chart paper or a presentation.</p>
+
+        <ul class="grid" aria-hidden>
+          <li>⛰️ Matterhorn & Jungfrau</li>
+          <li>🚆 Scenic railways (Glacier Express)</li>
+          <li>🏛️ Cities: Zurich, Geneva, Bern</li>
+          <li>🍫 Swiss chocolate & cheese</li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <a class="btn" href="#trip">View Trip Plan</a>
+        </div>
+      </div>
+
+      <aside class="card" style="display:flex;flex-direction:column;gap:12px">
+        <div style="height:200px;border-radius:10px;overflow:hidden;">
+          <img alt="Swiss mountains" src="https://images.unsplash.com/photo-1508264165352-258a6b5b3a1f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" style="width:100%;height:100%;object-fit:cover;display:block"/>
+        </div>
+        <div class="muted" style="font-size:13px">Tip: Buy a Swiss Travel Pass for unlimited rail, bus & boat trips (saves money if visiting multiple cities and mountains).</div>
+      </aside>
+    </section>
+
+    <!-- Trip Plan -->
+    <section id="trip" class="card" style="margin-top:18px">
+      <h3 style="margin:0 0 10px 0">Trip Plan (3–7 Days)</h3>
+      <div class="trip-grid" role="list">
+        <div class="trip-day" role="listitem">
+          <h4>Day 1 — Zurich</h4>
+          <ul class="muted"><li>Altstadt (Old Town)</li><li>Lake Zurich boat ride</li></ul>
+        </div>
+        <div class="trip-day">
+          <h4>Day 2 — Lucerne</h4>
+          <ul class="muted"><li>Chapel Bridge & Lion Monument</li><li>Mt. Pilatus / Mt. Rigi excursion</li></ul>
+        </div>
+        <div class="trip-day">
+          <h4>Day 3 — Interlaken</h4>
+          <ul class="muted"><li>Train to Jungfraujoch (Top of Europe)</li><li>Paragliding / Hiking</li></ul>
+        </div>
+        <div class="trip-day">
+          <h4>Day 4 — Bern</h4>
+          <ul class="muted"><li>Zytglogge (Clock Tower)</li><li>Einstein House</li></ul>
+        </div>
+        <div class="trip-day">
+          <h4>Day 5 — Geneva</h4>
+          <ul class="muted"><li>UN Headquarters (external)</li><li>Jet d’Eau & lakeside</li></ul>
+        </div>
+        <div class="trip-day">
+          <h4>Day 6 — Zermatt</h4>
+          <ul class="muted"><li>Matterhorn viewpoints</li><li>Matterhorn Glacier Paradise</li></ul>
+        </div>
+        <div class="trip-day">
+          <h4>Day 7 — Free Day</h4>
+          <ul class="muted"><li>Shopping: chocolate & souvenirs</li><li>Relax & depart</li></ul>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:12px">Short-trip tip: Base yourself in Zurich or Lucerne for a 3–4 day trip and take 1–2 mountain day excursions. For 7 days include Zermatt and Geneva for variety.</p>
+    </section>
+
+    <!-- Routes & Map -->
+    <section id="routes" class="two-col" style="margin-top:14px;gap:16px">
+      <div class="card">
+        <h3 style="margin:0 0 8px 0">Routes & Local Transportation</h3>
+        <ol style="margin:8px 0 0 18px;color:var(--muted)">
+          <li>Typical route: <strong>Zurich → Lucerne → Interlaken → Bern → Geneva → Zermatt</strong></li>
+          <li>Transport: Swiss Railways (fast & scenic), local buses, cable cars & mountain trains</li>
+          <li>Passes: Swiss Travel Pass (best for multi-city), Half-Fare Card for discounts</li>
+          <li>Book premium scenic trains (Glacier Express / Bernina Express) early — some require reservation</li>
+        </ol>
+
+        <h4 style="margin-top:12px">Practical tips</h4>
+        <ul style="color:var(--muted);margin:6px 0 0 18px">
+          <li>Carry a refillable bottle — many towns have clean public water</li>
+          <li>Train stations have left-luggage facilities in major hubs</li>
+          <li>City bikes & trams are ideal for short inner-city travel</li>
+        </ul>
+      </div>
+
+      <aside class="card">
+        <h4 style="margin:0 0 8px 0">Route Map (sketch)</h4>
+        <div class="map" aria-hidden>
+          <!-- Simple illustrative SVG map for chart-paper use -->
+          <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+            <rect x="0" y="0" width="600" height="360" fill="none"/>
+            <!-- approximate positions -->
+            <circle cx="120" cy="60" r="10" fill="#ef4444" />
+            <text x="140" y="64" font-family="Inter,Arial" font-size="12">Zurich</text>
+
+            <circle cx="200" cy="120" r="10" fill="#ef4444" />
+            <text x="220" y="124" font-family="Inter,Arial" font-size="12">Lucerne</text>
+
+            <circle cx="300" cy="160" r="10" fill="#ef4444" />
+            <text x="320" y="164" font-family="Inter,Arial" font-size="12">Interlaken</text>
+
+            <circle cx="200" cy="230" r="10" fill="#ef4444" />
+            <text x="220" y="234" font-family="Inter,Arial" font-size="12">Bern</text>
+
+            <circle cx="70" cy="260" r="10" fill="#ef4444" />
+            <text x="90" y="264" font-family="Inter,Arial" font-size="12">Geneva</text>
+
+            <circle cx="420" cy="220" r="10" fill="#ef4444" />
+            <text x="440" y="224" font-family="Inter,Arial" font-size="12">Zermatt</text>
+
+            <!-- route lines -->
+            <path d="M130 60 C160 80 180 110 200 120" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M210 122 C250 140 280 150 300 160" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M310 162 C260 190 230 210 200 230" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M190 232 C120 250 90 260 80 260" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M310 170 C350 170 390 200 420 220" stroke="#ef4444" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div style="margin-top:8px;color:var(--muted);font-size:13px">Sketch map — draw this larger on chart paper and add arrows.</div>
+      </aside>
+    </section>
+
+    <!-- Costs -->
+    <section id="costs" class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 8px 0">Cost of Travel (Indicative)</h3>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div style="flex:1;min-width:220px">
+          <strong>Transport</strong>
+          <p class="muted" style="margin:6px 0 0 0">CHF 150 - 350 (Swiss Travel Pass or point-to-point; varies by season & class)</p>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <strong>Food</strong>
+          <p class="muted" style="margin:6px 0 0 0">CHF 40 - 120 per day (mix of cafes and restaurants)</p>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <strong>Stay</strong>
+          <p class="muted" style="margin:6px 0 0 0">CHF 80 - 300+ per night (budget → mid-range)</p>
+        </div>
+        <div style="flex:1;min-width:220px">
+          <strong>Attractions</strong>
+          <p class="muted" style="margin:6px 0 0 0">CHF 30 - 150 for major mountain / special-site excursions</p>
+        </div>
+      </div>
+
+      <p class="muted" style="margin-top:10px">Estimated total for 7 days (mid-range): <strong>CHF 1,200 - 3,000+</strong> per person. Convert to INR or your currency for local planning.</p>
+    </section>
+
+    <!-- Important People -->
+    <section id="people" class="card" style="margin-top:14px">
+      <h3 style="margin:0 0 10px 0">Important People & Contributions</h3>
+      <div class="people-list">
+        <div class="person"><strong>Albert Einstein</strong> — Physicist. Worked in Bern while publishing his 1905 papers.</div>
+        <div class="person"><strong>Henri Dunant</strong> — Humanitarian. Founder of the International Red Cross; Nobel Peace Prize laureate.</div>
+        <div class="person"><strong>Jean-Jacques Rousseau</strong> — Philosopher. Influenced modern education & political thought; born in Geneva region.</div>
+        <div class="person"><strong>Carl Jung</strong> — Psychologist. Founder of analytical psychology; worked in Zurich.</div>
+        <div class="person"><strong>Le Corbusier</strong> — Architect. Pioneer of modern architecture; Swiss-born innovator.</div>
+      </div>
+
+      <p class="muted" style="margin-top:10px">Use these names as short write-ups on your chart paper — add a small portrait or illustration next to each name.</p>
+    </section>
+
+    <footer>
+      <div>Made for classroom & chart-paper use — printable single-page guide.</div>
+      <div style="margin-top:6px">© Switzerland Trip Planner</div>
+    </footer>
+  </div>
+</body>
+</html>
